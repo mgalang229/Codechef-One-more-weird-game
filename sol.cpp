@@ -5,7 +5,16 @@ using namespace std;
 void test_case() {
 	int n, m;
 	cin >> n >> m;
-	cout << n * (m - 1) + m * (n - 1) << "\n";
+	int a = n - 1;
+	int d = 1 + ((n - 1) * 2);
+	int ans = 0;
+	if(m > 1) {
+		ans = a + ((m - 1) * d);
+	}
+	else if(m == 1) {
+		ans = n - 1;
+	}
+	cout << ans << "\n";
 }
 
 int main() {
